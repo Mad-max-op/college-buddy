@@ -17,7 +17,7 @@ body {
   height: 60vh;
   width: 100vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content : space-around;
   align-items: center;
   flex-direction: column;
 }
@@ -93,8 +93,8 @@ p {
     overflow-x: hidden;
   }
   .logo{
-    width : 20vw;
-    height: 20vw;
+    width : 20vh;
+    height: 20vh;
   }
 
   .login-box{
