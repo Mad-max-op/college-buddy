@@ -21,6 +21,13 @@ body {
   align-items: center;
   flex-direction: column;
 }
+@keyframes rot {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
 .logo {
   position: relative;
   top: 20px;
@@ -30,6 +37,7 @@ body {
   border-radius: 50%;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   z-index: 2;
+  animation: rot infinite 2s;
 }
 
 .login-box {
