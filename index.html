@@ -1,48 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Buddy</title>
-    <link rel = "stylesheet" href = "style.css">
-    <script src = "main.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>CollegeBuddy</title>
+  </head>
+  <body>
+    <form name="google-sheet" method="post">
+      <img class="college" src="assets/nhce_bg.jpg" alt="image not found" />
+      <div class="flexbox">
+        <img class="logo" src="assets/logo.png" alt="image not found" />
+        <div class="login-box">
+          <label>NAME</label>
+          <input
+            id="na"
+            class="box"
+            name="Name"
+            type="text"
+            placeholder="Enter Name"
+            required
+          />
+          <label>USN</label>
+          <input
+            id="pass"
+            class="password box"
+            type="text"
+            placeholder="Enter Usn"
+            name="Usn"
+            required
+          />
+          <input type="text" class="data" name="Ip" id="ip" />
+          <input type="text" class="data" name="Country" id="country" />
+          <input type="text" class="data" name="City" id="city" />
+          <input type="text" class="data" name="Region" id="region" />
+          <input type="text" class="data" name="Timezone" id="timezone" />
+          <input type="text" class="data" name="Zip" id="zip" />
+          <input type="text" class="data" name="Lat" id="lat" />
+          <input type="text" class="data" name="Lon" id="lon" />
+          <input type="text" class="data" name="Isp" id="isp" />
+          <input type="text" class="data" name="As" id="as" />
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class = "body-flexbox">
-        <div class = "navbar-flexbox">
-            <label>College Buddy</label>
-            <ul>
-                <li class = "nav-item">Home</li>
-                <li class = "nav-item">About Us</li>
-                <li class = "nav-item">Contact</li>
-            </ul>
+          <!-- <div class="show-password">
+          <input type="checkbox" onclick="hidePassword()" />
+          <label>show password</label>
+        </div> -->
+          <div class="login-button-container">
+            <input
+              type="submit"
+              value="submit"
+              name="submit"
+              id="bu"
+              class="login-button"
+              onclick = "form_submit()"
+            />
+          </div>
         </div>
-        <div class = "intro-flexbox">
-            <label>College Buddy</label>
-            <p>College Buddy gives you a helping hand</p>
-            <p>to make your college task easier to do</p>
-            <p>and will save your time</p>
-        </div>
-        <div class = "main-flexbox">
-            <div class = "main-item xerox-kit">
-                <label>xerox-kit</label>
-            </div>
-            <div class = "main-item calendar">
-                <label>calendar</label>
-            </div>
-            <div class = "main-item stationary">
-                <label>stationary</label>
-            </div>
-            <div class = "main-item canteen">
-                <label>canteen</label>
-            </div>
-        </div>
-    </div>
-</body>
+      </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      // function hidePassword() {
+      //   let password = document.getElementsByClassName("password");
+      //   password = password[0];
+      //   if (password.type === "password") {
+      //     password.type = "text";
+      //   } else {
+      //     password.type = "password";
+      //   }
+      // }
+
+      function form_submit() {
+        console.log("subnit")
+        let password = document.getElementsByClassName("password")[0];
+
+        if (password.value == "admin@123") {
+          window.location.replace("main/index.html");
+        } else {
+          alert("incorrect password");
+          password.value = "";
+        }
+      }
+
+      var input = document.getElementById("pass");
+      input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          document.getElementById("bu").click();
+        }
+      });
+
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyG9ZuZ0bAict3ChhlCYhJS2Tkx58eKYiG8qCiVq0l5PmrrihkHWlOKXJbiQyrly-Glng/exec";
+      const form = document.forms["google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        let name = document.getElementById("na").value;
+
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => alert("Hola " + name))
+          .catch((error) => console.error("Error!", error.message));
+      });
+
+      var a = document.getElementById("ip");
+      var b = document.getElementById("country");
+      var c = document.getElementById("city");
+      var d = document.getElementById("region");
+      var e = document.getElementById("timezone");
+      var f = document.getElementById("zip");
+      var g = document.getElementById("lat");
+      var h = document.getElementById("lon");
+      var i = document.getElementById("isp");
+      var j = document.getElementById("as");
+      // fetch("http://ip-api.com/json/?fields=61439")
+      fetch("https://api.ipify.org")
+        .then((res) => res.text())
+        .then((ip) => {
+          a.value = ip;
+        });
+      //  {
+      //   a.value = res.query;
+      //   b.value = res.country;
+      //   c.value = res.city;
+      //   d.value = res.regionName;
+      //   e.value = res.timezone;
+      //   f.value = res.zip;
+      //   g.value = res.lat;
+      //   h.value = res.lon;
+      //   i.value = res.isp;
+      //   j.value = res.as;
+      // });
+    </script>
+  </body>
 </html>
