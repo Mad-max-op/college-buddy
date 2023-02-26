@@ -38,10 +38,10 @@ body {
 }
 
 .intro-flexbox {
-  height: 60vh;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NHCE_Campus.jpg/1200px-NHCE_Campus.jpg"),
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  background-size: cover;
+  background-repeat: repeat-x;
+
   background-position: 0 -200px;
   color: white;
 
@@ -82,7 +82,7 @@ body {
 }
 
 .main-item {
-  width: 20em;
+  width: 15em;
   height: 10em;
   padding: 0 50%;
   background-size: cover;
