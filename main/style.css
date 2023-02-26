@@ -117,3 +117,20 @@ body {
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-blend-mode: overlay;
 }
+@media only screen and (min-width: 500px) {
+  .main-flexbox {
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+  }
+  .main-item {
+    width: 10em;
+    height: 10em;
+    padding: 0 20% 0 20%;
+    /* background-size: cover; */
+    margin: 2% 5%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
