@@ -1,6 +1,12 @@
 body {
   padding: 0;
   margin: 0;
+  /* background-color: rgba(232, 251, 255, 255); */
+  /* background-image: url("nhce_bg.jpg");
+  position: absolute;
+  background-size: 100% 1000px;
+  background-repeat: no-repeat;
+  background-size: cover; */
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -11,19 +17,10 @@ body {
   height: 60vh;
   width: 100vw;
   display: flex;
-  justify-content: space-around;
+  justify-content : space-around;
   align-items: center;
   flex-direction: column;
 }
-@keyframes rot {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(180deg);
-  }
-}
-
 .logo {
   position: relative;
   top: 20px;
@@ -33,7 +30,6 @@ body {
   border-radius: 50%;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   z-index: 2;
-  animation: rot infinite 2s;
 }
 
 .login-box {
@@ -61,14 +57,13 @@ body {
 .login-button {
   width: 100px;
   height: 120%;
-  background-color: rgb(6, 6, 104);
-
+  background-color: rgba(49, 43, 98, 255);
   color: white;
   border-radius: 20px;
 }
 
 .login-button:hover {
-  background-color: rgba(49, 43, 98, 255);
+  transform: scale(1.1) translateY(-2px);
   cursor: pointer;
 }
 
@@ -82,7 +77,7 @@ body {
 }
 .college {
   position: absolute;
-  width: 100%;
+  width : 100%;
   height: 100%;
 }
 p {
@@ -92,23 +87,24 @@ p {
   display: none;
 }
 
-@media only screen and (max-width: 500px) {
-  body {
+@media only screen and (max-width : 500px){
+
+  body{
     overflow-x: hidden;
   }
-  .logo {
-    width: 15vh;
-    height: 15vh;
+  .logo{
+    width : 20vh;
+    height: 20vh;
   }
 
-  .login-box {
-    width: 60vw;
+  .login-box{
+    width : 60vw;
     height: 40vh;
-    gap: 0.001em;
+    gap : .001em;
   }
 
-  .college {
-    position: absolute;
+  .college{
+    position : absolute;
     object-fit: cover;
     object-position: -320px 0;
   }
