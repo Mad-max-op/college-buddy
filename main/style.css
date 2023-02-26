@@ -41,8 +41,9 @@ body {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NHCE_Campus.jpg/1200px-NHCE_Campus.jpg"),
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-repeat: repeat-x;
+  background-size: 1600px;
 
-  background-position: 0 -200px;
+  background-position: 0px -300px;
   color: white;
 
   display: flex;
