@@ -335,6 +335,25 @@ body{
     padding : 20px 1px;
     font-size: 0.7em;
 }
+
+.contact-flexbox{
+    align-items: center;
+}
+
+.contact-row{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail-form{
+    padding : 10px 0;
+}
+
+.contact-gitlinks img{
+    height: 30vw;
+    width: 30vw;    
+}
 }
 
 @media only screen and (min-width: 500px) and (max-width : 1300px) {
