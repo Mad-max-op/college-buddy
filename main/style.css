@@ -253,6 +253,28 @@ body{
 .contact-nithesh{
     object-position: 0 20%;
 }
+
+            /* animations and all */
+.nav-item:hover{
+    animation-name : example;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes example{
+    from {
+        border-top : solid 2px gold;
+        border-bottom : solid 2px gold;
+        border-image: linear-gradient(to right, gold 0%, transparent 50%) 100% 2;
+
+    }
+    to{
+        border-top : solid 2px gold;
+        border-bottom : solid 2px gold;
+        border-image: linear-gradient(to right, gold 100%, transparent 50%) 100% 2;
+    }
+}
+
             /* css for mobile */
 
 @media only screen and (max-width : 950px){
