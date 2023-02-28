@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Buddy</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "main.js" defer></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "body-flexbox">
+        <div class = "navbar-flexbox">
+            <label>College Buddy</label>
+            <img src = "../assets/menu.png" alt = "image not found" class = "menu" onclick = "drop_box()">
+            <ul id = "navbar-ul">
+                <li class = "nav-item"><a href="index.html">Home</a></li>
+                <li class = "nav-item"><a href="about_us.html">About Us</a></li>
+                <li class = "nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <img src = "../assets/contact_bg.jpg" alt = "image not found" class = "intro-bg">
+        <div class = "intro-flexbox">
+            <label>Contact Us</label>
+            <p>By sending us a email</p>
+            <p>or you can directly dm us on github</p>
+            <p>feedbacks would be appreciated</p>
+        </div>
+        <div class = "contact-flexbox">
+            <div class = "contact-row row1">
+                <img class = "row-image mail-image" src = "../assets/mail.png" alt = "image not found">
+                <form action = "mailto:attackise@gmail.com" method = "post" enctype="text/plain" class = "mail-form">
+                    <input type = "text" name = "name" placeholder="Enter your name">
+                    <input type ="email" name = "mail" placeholder = "Enter your mail id">
+                    <textarea type ="text" name = "comment" placeholder = "Enter your feedback" rows = "4"></textarea>
+                    <input type = "submit" value = "send" class = "contact-submit">
+                </form>
+            </div>
+            <div class = "contact-row contact-row2">
+                <label>Contact us on github</label>
+                <div class = "contact-gitlinks">
+                    <img src = "../assets/nithesh.jpg" alt = "image not found" class = "row-image nithesh-img contact-nithesh" onclick = "visit('https://github.com/Nithesh24')">
+                    <img src = "../assets/aditya.jpg" alt = "image not found" class = "row-image aditya-img" onclick = "visit('https://github.com/P-ADITYA15')">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

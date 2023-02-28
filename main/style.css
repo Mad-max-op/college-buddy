@@ -173,6 +173,86 @@ body{
     
 }
 
+            /* contact us css */
+
+.mail-image{
+    filter : brightness(.5)
+}
+
+.contact-flexbox{
+    padding : 10vh 0;
+    display : flex;
+    flex-direction : column;
+    width : 100%;
+    justify-content: center;
+    align-items: center;
+}
+.contact-row{
+    display : flex;
+    width : 60vw;
+}
+
+.mail-form{
+    padding: 30px 20px 0 20px;
+    width: 100%;
+
+    display : flex;
+    flex-direction : column;
+    gap : .5em;
+    border-bottom : solid 2px gold;
+    border-top : solid 2px gold;
+}
+
+.mail-form input[type=text]{
+    width : 20vw;
+}
+.mail-form input[type=email]{
+    width : 20vw;
+}
+
+.contact-submit{
+    display : block;
+    width : 10vh;
+    border-radius : 10px;
+    color :rgb(58, 16, 120);
+    padding : 0;
+}
+
+.contact-row2{
+    display : flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: center;
+    padding: 5vh;
+}
+
+.contact-row2 label{
+    padding : 20px;
+    font-size : 1.4em;
+}
+
+.contact-gitlinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap : 1em;
+    border-bottom : solid 2px gold;
+    border-top : solid 2px gold;
+    padding : 15px 0;
+}
+
+.contact-gitlinks img{
+    height: 20vh;
+    width: 20vh;
+    object-fit: cover;
+    border-radius : 50%;
+}
+
+.contact-nithesh{
+    object-position: 0 20%;
+}
             /* css for mobile */
 
 @media only screen and (max-width : 950px){

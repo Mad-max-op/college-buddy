@@ -9,11 +9,6 @@ function visit(url)
 {
     window.location.href = url
 }
-function visit_xerox_kit()
-{
-    window.location.href = "tools/xerox-kit.html"
-}
-
 
 // nav bar drop box code
 let navbar_ul = document.getElementById("navbar-ul")
