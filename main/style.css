@@ -51,6 +51,7 @@ body{
     width: 100%;
     object-fit: cover;
 }
+
 .intro-flexbox{
     position : absolute;
     top : 10vh;                 /*using position absolute and to make it come below navbar*/
@@ -128,6 +129,51 @@ body{
     background-blend-mode: overlay;
 }
 
+                /* about us page css */
+
+.aboutus-flexbox{
+    padding : 10vh 0;
+    width:100%;
+    height: auto;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items: center;
+    gap : 10vh;
+}
+
+.aboutus-row{
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap : 3vw;
+}
+
+.row-image{
+    height: 30vh;
+    width: 30vh;
+    object-fit: cover;
+    border-radius : 50%;
+}
+
+.nithesh-img{
+    object-position: 0px -10vh;
+}
+
+.row-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    border-top : solid 2px gold;
+    border-bottom : solid 2px gold;
+    
+}
+
+            /* css for mobile */
 
 @media only screen and (max-width : 950px){
 
@@ -193,7 +239,7 @@ body{
 
 }
 
-@media only screen and (min-width: 500px) and (max-width : 1300px) {
+@media only screen and (min-width: 500px) and (max-width : 13pyth00px) {
     .main-flexbox {
       width: 90%;
       margin: 2% 5% 2% 5%;

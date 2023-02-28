@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Buddy</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "main.js" defer></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "body-flexbox">
+        <div class = "navbar-flexbox">
+            <label>College Buddy</label>
+            <img src = "../assets/menu.png" alt = "image not found" class = "menu" onclick = "drop_box()">
+            <ul id = "navbar-ul">
+                <li class = "nav-item"><a href="index.html">Home</a></li>
+                <li class = "nav-item"><a href="about_us.html">About Us</a></li>
+                <li class = "nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <img src = "../assets/about_us_bg.jpeg" alt = "image not found" class = "intro-bg">
+        <div class = "intro-flexbox">
+            <label>About us</label>
+            <p>We are engineers</p>
+            <p>We learn We understand We implement</p>
+            <p>Our goal is to solve problems and make better life for everyone</p>
+        </div>
+        <div class = "aboutus-flexbox">
+            <div class = "aboutus-row">
+                <img src = "../assets/nithesh.jpg" alt = "image not found" class = "row-image nithesh-img" onclick = "visit('https://github.com/Nithesh24')">
+                <div class = "row-about">
+                    <p>Nithesh Kumar usn 1NH21IS104</p>
+                    <p>Handle mainly the front end of the page</p>
+                    <p>click on image to visit github profile</p>
+                </div>
+            </div>
+            <div class = "aboutus-row">
+                <img src = "../assets/aditya.jpg" alt = "image not found" class = "row-image aditya-img" onclick = "visit('https://github.com/P-ADITYA15')">
+                <div class = "row-about">
+                    <p>P Aditya usn 1NH21IS105</p>
+                    <p>Handle mainly the back end of the page</p>
+                    <p>click on image to visit github profile</p>
+                </div>
+            </div>
+            <div class = "aboutus-row">
+                <img src = "../assets/college_buddy.png" alt = "image not found" class = "row-image collegebuddy-img" onclick = "visit('https://github.com/Mad-max-op/college-buddy')">
+                <div class = "row-about">
+                    <p>Our project College Buddy</p>
+                    <p>stack : html, css, js, apis : </p>
+                    <p>click on image to visit github repo of the porject</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

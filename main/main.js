@@ -3,6 +3,18 @@ function test(){
 }
 
 
+//visting tool pages
+
+function visit(url)
+{
+    window.location.href = url
+}
+function visit_xerox_kit()
+{
+    window.location.href = "tools/xerox-kit.html"
+}
+
+
 // nav bar drop box code
 let navbar_ul = document.getElementById("navbar-ul")
 let intro_flexbox = document.getElementsByClassName("intro-flexbox")[0]
@@ -25,3 +37,4 @@ function drop_box()
         main_flexbox.style.top = "0vh"
     }
 }
+
