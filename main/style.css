@@ -237,9 +237,27 @@ body{
     transition: 0.5s;
 }
 
+.aboutus-row{
+    width: 90%;
+    padding: 0 5%;
 }
 
-@media only screen and (min-width: 500px) and (max-width : 13pyth00px) {
+.row-image{
+    height: 30vw;
+    width: 30vw;
+}
+
+.nithesh-img{
+    object-position: 0 20%;
+}
+
+.row-about{
+    padding : 20px 1px;
+    font-size: 0.7em;
+}
+}
+
+@media only screen and (min-width: 500px) and (max-width : 1300px) {
     .main-flexbox {
       width: 90%;
       margin: 2% 5% 2% 5%;
