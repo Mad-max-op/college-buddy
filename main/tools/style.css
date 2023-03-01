@@ -1,0 +1,218 @@
+*{
+    padding : 0;
+    margin : 0;
+    font-family: 'lora', serif;
+}
+body{
+    background-color: white;
+}
+
+
+.body-flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar-flexbox{
+    display : flex;
+    flex-direction: row;
+    gap : 20em;
+    padding-left: 2em;
+    align-items: center;
+    background-color: rgb(58, 16, 120);
+    height: 10vh;
+    color : white;
+    font-size : 1.2em;
+}
+
+.navbar-flexbox label{
+    font-size : 1.4em;
+    color : gold;
+}
+
+/* .navbar-flexbox li{
+    display : inline;
+    padding : 0 1em;
+} */
+#navbar-ul{
+    display : flex;
+    flex-direction: row;
+    background-color:rgb(58, 16, 120);
+    gap : 3em;
+}
+
+.nav-item{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.top-border{
+    width : 0%;
+    height: 1px;
+    background-color: gold;
+}
+
+.bottom-border{
+    width : 0%;
+    margin-left : 0%;
+    height: 1px;
+    background-color: gold;
+}
+
+.menu{
+    display: none;
+}
+.navbar-flexbox a{
+    text-decoration: none;
+    color : white;
+}
+
+.main-flexbox{
+    display: flex;
+    flex-direction : column;
+    width : 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap : 5em;
+    padding: 10vh 0;
+}
+
+.tool{
+    display : flex;
+    flex-direction : row;
+    width: 60vw;
+    height: auto;
+    justify-content: center;
+    gap : 2em;
+}
+
+.tool-image{
+    display: flex;
+    height: 20vh;
+    width : 20vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url("../../assets/xerox-kit.avif");
+    background-blend-mode: overlay;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.tool-image label{
+    position : absolute;
+    color : white;
+    border-top : solid 2px gold;
+    border-bottom : solid 2px gold;
+}
+
+.tool-desc{
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+    border-top : solid 2px gold;
+    border-bottom : solid 2px gold;   
+}
+
+            /* animations and all */
+
+.nav-item:hover .top-border{
+animation : top-border-animation .5s ease-out forwards;
+}
+.nav-item:hover .bottom-border{
+animation : bottom-border-animation .5s ease-out forwards;
+}
+
+@keyframes top-border-animation{
+from {
+    width : 0%;
+}
+to {
+    width : 100%;
+}
+}
+
+@keyframes bottom-border-animation{
+from {
+    margin-left : 100%;
+    width : 0%;
+}
+to {
+    margin : 0%;
+    width : 100%;
+}
+}
+
+
+/* css for mobile */
+
+@media only screen and (max-width : 950px){
+
+.body-flexbox{
+    justify-content: flex-start;
+    height: auto;
+}
+.navbar-flexbox{
+    width : 100%;
+    height: 10vh;
+    padding : 0;
+}
+
+.navbar-flexbox label{
+    white-space : nowrap;
+    position: relative;
+    left : 2vh;
+}
+
+.navbar-flexbox ul{
+    display: block;
+    width: 100%;
+    top : 10vh;
+    position: absolute;
+    right: 0px;
+}
+
+#navbar-ul{
+    background-color:rgb(58, 16, 120);
+    height: 10.1vh;
+    padding : 0;
+    margin : 0;
+    top : 9.9vh;
+}
+.navbar-flexbox li{
+    display: block;
+    color : white;
+}
+
+
+.menu{
+    display: block;
+    height: 5vh;
+    width: 5vh;
+    position : absolute;
+    right: 2vw;
+}
+}
+
+
+@media only screen and (min-width: 500px) and (max-width : 1300px) {
+.main-flexbox {
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+}
+.main-item {
+    width: 10em;
+    height: 10em;
+    padding: 0 20% 0 20%;
+    /* background-size: cover; */
+    margin: 2% 5%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}            
