@@ -31,13 +31,37 @@ body{
     color : gold;
 }
 
-.navbar-flexbox li{
+/* .navbar-flexbox li{
     display : inline;
     padding : 0 1em;
-}
+} */
 #navbar-ul{
+    display : flex;
+    flex-direction: row;
     background-color:rgb(58, 16, 120);
+    gap : 3em;
 }
+
+.nav-item{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.top-border{
+    width : 0%;
+    height: 1px;
+    background-color: gold;
+}
+
+.bottom-border{
+    width : 0%;
+    margin-left : 0%;
+    height: 1px;
+    background-color: gold;
+}
+
 .menu{
     display: none;
 }
@@ -255,23 +279,31 @@ body{
 }
 
             /* animations and all */
-.nav-item:hover{
-    animation-name : example;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+
+.nav-item:hover .top-border{
+    animation : top-border-animation .5s ease-out forwards;
+}
+.nav-item:hover .bottom-border{
+    animation : bottom-border-animation .5s ease-out forwards;
 }
 
-@keyframes example{
+@keyframes top-border-animation{
     from {
-        border-top : solid 2px gold;
-        border-bottom : solid 2px gold;
-        border-image: linear-gradient(to right, gold 0%, transparent 50%) 100% 2;
-
+        width : 0%;
     }
-    to{
-        border-top : solid 2px gold;
-        border-bottom : solid 2px gold;
-        border-image: linear-gradient(to right, gold 100%, transparent 50%) 100% 2;
+    to {
+        width : 100%;
+    }
+}
+
+@keyframes bottom-border-animation{
+    from {
+        margin-left : 100%;
+        width : 0%;
+    }
+    to {
+        margin : 0%;
+        width : 100%;
     }
 }
 
