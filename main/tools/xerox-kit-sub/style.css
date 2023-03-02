@@ -71,52 +71,56 @@ body{
 }
 
 .main-flexbox{
-    display: flex;
-    flex-direction : column;
-    width : 100%;
-    height: auto;
-    align-items: center;
+    display : flex;
+    flex-direction: row;
     justify-content: center;
-    gap : 5em;
+    align-items: flex-start;
+    width : 100%;
+    height: 100vh;
+}
+
+.col{
+    width : 40%;
+    display : flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     padding: 10vh 0;
 }
 
-.tool{
-    display : flex;
+.col2 {
+    width: 60%;
+    display: flex;
     flex-direction : row;
-    width: 60vw;
-    height: auto;
-    justify-content: center;
-    gap : 2em;
+    padding: 10vh 5vw;
+    gap : 1em;
+}
+.col2 img{
+    display: block;
+    width : 50%;
+    height: 70vh;
+    object-fit : cover;
 }
 
-.tool-image{
-    display: flex;
-    height: 20vh;
-    width : 20vh;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url("../../assets/xerox-kit.avif");
-    background-blend-mode :darken;
-    background-size: cover;
+.form-flex{
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1em;
+    border : solid 2px gold;
+    padding : 10%;
+    border-radius : 10px;
+}
+
+.submit-btn{
+    position: relative;
+    left : 50%;
     border-radius: 10px;
-}
-
-.tool-image label{
-    position : absolute;
+    background-color:rgb(58, 16, 120);
     color : white;
-    border-top : solid 2px gold;
-    border-bottom : solid 2px gold;
 }
 
-.tool-desc{
-    display: flex;
-    flex-direction : column;
-    justify-content: center;
-    align-items: center;
-    border-top : solid 2px gold;
-    border-bottom : solid 2px gold;   
-}
+
+
 
             /* animations and all */
 
