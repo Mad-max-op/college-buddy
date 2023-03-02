@@ -343,10 +343,14 @@ body{
     padding : 0;
     margin : 0;
     top : 9.9vh;
+    flex-direction: column;
+    gap : 0;
+    font-size : 1em;
 }
 .navbar-flexbox li{
     display: block;
     color : white;
+    padding-left : 2vw;
 }
 
 
