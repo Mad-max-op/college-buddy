@@ -34,42 +34,42 @@ const generatePDF = async (name, usn, code, coname, assno, sem, sec, date) => {
   firstPg.drawText(name, {
     x: 250,
     y: 395,
-    size: 18,
+    size: 15,
   });
   firstPg.drawText(usn, {
     x: 250,
-    y: 365,
-    size: 18,
+    y: 362,
+    size: 15,
   });
   firstPg.drawText(code, {
     x: 350,
-    y: 550,
-    size: 16,
+    y: 547,
+    size: 13,
   });
   firstPg.drawText(coname, {
     x: 350,
     y: 520,
-    size: 16,
+    size: 13,
   });
   firstPg.drawText(assno, {
     x: 350,
-    y: 495,
-    size: 16,
+    y: 494,
+    size: 13,
   });
   firstPg.drawText(sem, {
     x: 250,
     y: 330,
-    size: 18,
+    size: 15,
   });
   firstPg.drawText(sec, {
     x: 250,
-    y: 300,
-    size: 18,
+    y: 298,
+    size: 15,
   });
   firstPg.drawText(date, {
-    x: 290,
+    x: 300,
     y: 265,
-    size: 16,
+    size: 15,
   });
 
   const uri = await pdfDoc.saveAsBase64({ dataUri: true });
