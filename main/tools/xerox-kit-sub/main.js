@@ -20,7 +20,17 @@ $(".template-2").click(() => {
   });
 });
 
-const generatePDF = async (name, usn, code, coname, assno, sem, sec, date) => {
+const generatePDF = async (
+  name,
+  usn,
+  code,
+  coname,
+  assno,
+  sem,
+  sec,
+  date,
+  set
+) => {
   const { PDFDocument, rgb } = PDFLib;
   const filename = p + ".pdf";
   const exBytes = await fetch(filename).then((res) => {
@@ -81,7 +91,7 @@ const generatePDF = async (name, usn, code, coname, assno, sem, sec, date) => {
     });
     firstPg.drawText(usn, {
       x: 420,
-      y: 460,
+      y: 462,
       size: 15,
     });
     firstPg.drawText(code, {
@@ -89,10 +99,11 @@ const generatePDF = async (name, usn, code, coname, assno, sem, sec, date) => {
       y: 385,
       size: 13,
     });
+
     firstPg.drawText(coname, {
-      x: 325,
-      y: 665,
-      size: 25,
+      x: 90,
+      y: 384,
+      size: 13,
     });
     firstPg.drawText(assno, {
       x: 490,
@@ -101,17 +112,22 @@ const generatePDF = async (name, usn, code, coname, assno, sem, sec, date) => {
     });
     firstPg.drawText(sem, {
       x: 260,
-      y: 422,
-      size: 15,
+      y: 424,
+      size: 13,
     });
     firstPg.drawText(sec, {
       x: 461,
-      y: 422,
-      size: 15,
+      y: 424,
+      size: 13,
     });
     firstPg.drawText(date, {
       x: 470,
       y: 345,
+      size: 15,
+    });
+    firstPg.drawText(set, {
+      x: 115,
+      y: 424,
       size: 15,
     });
   }
@@ -134,7 +150,8 @@ function gen() {
   var f = document.getElementsByName("semester")[0].value;
   var g = document.getElementsByName("section")[0].value;
   var h = document.getElementsByName("date")[0].value;
+  var i = document.getElementsByName("assignment-number")[0].value;
 
   console.log(a, b);
-  generatePDF(a, b, c, d, e, f, g, h);
+  generatePDF(a, b, c, d, e, f, g, h, i);
 }
