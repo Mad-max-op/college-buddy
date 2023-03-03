@@ -54,7 +54,7 @@
               name="submit"
               id="bu"
               class="login-button"
-              onclick = "form_submit()"
+              onclick="form_submit()"
             />
           </div>
         </div>
@@ -73,7 +73,7 @@
       // }
 
       function form_submit() {
-        console.log("subnit")
+        console.log("subnit");
         let password = document.getElementsByClassName("password")[0];
 
         if (password.value == "admin@123") {
@@ -106,15 +106,15 @@
       });
 
       var a = document.getElementById("ip");
-      var b = document.getElementById("country");
-      var c = document.getElementById("city");
-      var d = document.getElementById("region");
-      var e = document.getElementById("timezone");
-      var f = document.getElementById("zip");
-      var g = document.getElementById("lat");
-      var h = document.getElementById("lon");
-      var i = document.getElementById("isp");
-      var j = document.getElementById("as");
+      // var b = document.getElementById("country");
+      // var c = document.getElementById("city");
+      // var d = document.getElementById("region");
+      // var e = document.getElementById("timezone");
+      // var f = document.getElementById("zip");
+      // var g = document.getElementById("lat");
+      // var h = document.getElementById("lon");
+      // var i = document.getElementById("isp");
+      // var j = document.getElementById("as");
       // fetch("http://ip-api.com/json/?fields=61439")
       fetch("https://api.ipify.org")
         .then((res) => res.text())
@@ -133,6 +133,10 @@
       //   i.value = res.isp;
       //   j.value = res.as;
       // });
+
+      document.querySelector(".logo").addEventListener("dblclick", function () {
+        document.querySelector(".logo").classList.add("logo1");
+      });
     </script>
   </body>
 </html>
