@@ -193,6 +193,12 @@ to {
     padding-left : 2vw;
 }
 
+.tool{
+    width : 90%;
+}
+.tool-image{
+    width : 40vh;
+}
 
 .menu{
     display: block;
