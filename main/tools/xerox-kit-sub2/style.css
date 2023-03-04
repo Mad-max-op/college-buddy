@@ -123,13 +123,14 @@ body {
 
   #navbar-ul {
     background-color: rgb(58, 16, 120);
-    height: 10.1vh;
+    height: 0vh;
     padding: 0;
     margin: 0;
     top: 9.9vh;
     flex-direction: column;
     gap: 0;
     font-size: 1em;
+    transition : .5s;
   }
   .navbar-flexbox li {
     display: block;

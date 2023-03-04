@@ -67,11 +67,171 @@ body {
   text-decoration: none;
   color: white;
 }
+
+.main-flexbox{
+  height: auto;
+  margin : 5%;
+  width : 90%;
+  border : solid 4px gold;
+  border-radius: 10px;
+
+  display : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items: center;
+}
+
+.canteens{
+  /* background-color : rgba(0, 0, 0, 0.5); */
+  display : flex;
+  flex-direction: row;
+  width: 90%;
+  height: 15vh;
+  padding : 2% 2%;
+  margin : 2% 3%;
+
+  border-top : solid 2px gold;
+  border-bottom : solid 2px gold;
+}
+
+.canteen{
+  width : 30%;
+  margin : 0 2.5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items : center;
+
+  border : solid 2px gold;
+  border-radius : 10px;
+}
+
+.canteen label{
+
+  padding : 2%;
+
+  font-size : 1.3em;
+  color : white;
+}
+
+.top-border2{
+  display: block;
+  height: 2px;
+  width: 20%;
+  background-color: gold;
+}
+
+.bottom-border2{
+  display: block;
+  height: 2px;
+  width: 20%;
+  background-color: gold;
+}
+
+.tango_{
+  background-image : url("assets/tango.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
+  background-blend-mode: overlay;
+  background-size : cover;
+}
+
+.udupi_{
+  background-image : url("assets/udupi.jpeg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
+  background-blend-mode: overlay;
+  background-size : cover;
+}
+
+.munch_{
+  background-image : url("assets/munch.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
+  background-blend-mode: overlay;
+  background-size : cover;
+}
+
+.canteen-menu{
+width : 90%;
+height: auto;
+border : solid 2px gold;
+border-radius : 10px;
+padding : 2.5%;
+
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+margin-bottom : 2.5%;
+transition : .5s;
+}
+
+.canteen-card{
+background-image : url("assets/munch.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
+background-blend-mode: overlay;
+width : 20%;
+height: 20vh;
+background-size: cover;
+color : white;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+
+border: solid 2px gold;
+border-radius: 10px;
+margin : 2.5% 2.3%;
+
+transition : .5s;
+
+}
+
+.canteen-card label{
+position: relative;
+border-top : solid 2px gold;
+border-bottom : solid 2px gold;
+width: auto;
+left : 10%;
+}
+
+.canteen-card p{
+position: relative;
+left : 10%;
+font-size : 1.2em;
+}
+
+.canteen-card img{
+position: relative;
+left : 10%;
+width : 10%;
+background-color : rgba(255, 255, 255, 1);
+border-radius : 5px;
+}
+
+/* animation and stuff */
+
 .nav-item:hover .top-border {
   animation: top-border-animation 0.5s ease-out forwards;
 }
 .nav-item:hover .bottom-border {
   animation: bottom-border-animation 0.5s ease-out forwards;
+}
+
+.canteen:hover .top-border2 {
+  animation: top-border-fade 0.5s ease-out forwards;
+}
+.canteen:hover .bottom-border2 {
+  animation: bottom-border-fade 0.5s ease-out forwards;
+}
+
+.canteen:hover label{
+  transform: scale(1.2);
+  transition: .5s ease-out;
+}
+
+.canteen:active {
+  filter : brightness(.5);
+}
+
+.canteen:focus{
+  transform: scale(1.2);
 }
 
 @keyframes top-border-animation {
@@ -92,6 +252,49 @@ body {
     margin: 0%;
     width: 100%;
   }
+}
+
+
+
+@keyframes top-border-fade {
+  from {
+    width: 20%;
+    margin-left: 0%;
+  }
+  to {
+    width: 0%;
+    margin-left: 20%;
+  }
+}
+
+@keyframes bottom-border-fade {
+  from {
+    margin-right: 0%;
+    width: 20%;
+  }
+  to {
+    margin-right: 20%;
+    width: 0%;
+  }
+}
+
+
+.tango:hover{
+  background-image : url("assets/tango.jpg"), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6));
+  background-blend-mode: overlay;
+  background-size : cover;
+}
+
+.udupi:hover{
+  background-image : url("assets/udupi.jpeg"), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6));
+  background-blend-mode: overlay;
+  background-size : cover;
+}
+
+.munch:hover{
+  background-image : url("assets/munch.jpg"), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6));
+  background-blend-mode: overlay;
+  background-size : cover;
 }
 
 /* css for mobile */
@@ -123,13 +326,15 @@ body {
 
   #navbar-ul {
     background-color: rgb(58, 16, 120);
-    height: 10.1vh;
+    height: 0vh;
     padding: 0;
     margin: 0;
     top: 9.9vh;
     flex-direction: column;
     gap: 0;
     font-size: 1em;
+
+    transition: 0.5sk;
   }
   .navbar-flexbox li {
     display: block;
@@ -143,5 +348,13 @@ body {
     width: 5vh;
     position: absolute;
     right: 2vw;
+  }
+  
+  .canteen-card{
+    width : 42.5%;
+  }
+ 
+  .canteens{
+    height: 10vh;
   }
 }
