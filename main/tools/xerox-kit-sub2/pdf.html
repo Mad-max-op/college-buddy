@@ -1,13 +1,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
-    <script src="https://unpkg.com/downloadjs@1.4.7"></script>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+   
+   
+    
     <title>Img To PDF</title>
   </head>
 
@@ -39,21 +36,25 @@
           </li>
         </ul>
       </div>
-      <div class="navv">
-        <span class="logoo"> <i class="fa fa-file-pdf-o fa-2x"></i> PDF </span>
+      <div class="nav">
+        <span class="logo"> <i class="fa fa-file-pdf-o"></i> PDF </span>
         <div>
-          <button class="butcdu" onclick="" id="convertBtn">SAVE AS PDF</button>
-          <button class="butcdu" onclick="" id="download">DOWNLOAD</button>
-          <button class="butcdu" id="upload-msg" type="button">
-            UPLOAD FILES
+          <button
+            onclick="{embedImages()}"
+            id="convertBtn"
+            convertbtn="{convertBtn}"
+          >
+            SAVE AS PDF
           </button>
+          <button onclick="{embedImages()}" id="download">DOWNLOAD</button>
+          <button id="upload-msg" type="button">UPLOAD FILES</button>
         </div>
       </div>
-
+  
       <div class="input-page" id="input-page">
         <div class="choose-file">
-          <div class="add-files">
-            <div class="file-container">
+          <div class="add-more-files">
+            <div class="inp-container">
               <input
                 type="file"
                 id="upload-file"
@@ -61,21 +62,30 @@
                 multiple
                 accept="image/*"
               />
-              <h3 class="drop">DRAG & DROP</h3>
+              <h4 class="drop">DRAG & DROP OR</h4>
               <p>
-                <i class="fa fa-file-image-o fa-5x img-icon"></i>
+                <i class="fa fa-file-image-o fa-4x img-icon"></i>
               </p>
               <label htmlFor="upload-file" id="custom-file">CHOOSE FILES</label>
             </div>
           </div>
         </div>
       </div>
-
+  
       <div class="pdf-page" id="pdf-page">
         <div class="create-pdf" id="create-pdf"></div>
       </div>
-    </div>
-
-    <script src="pdf.js"></script>
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+      <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+      <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+      <script src="
+  https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
+  "></script>
+      <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+      <script src="https://unpkg.com/downloadjs@1.4.7"></script>
+      <script src="pdf.js" ></script>
   </body>
 </html>
