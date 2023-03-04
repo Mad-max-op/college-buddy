@@ -136,6 +136,13 @@ body {
     color: white;
     padding-left: 2vw;
   }
+  .menu {
+    display: block;
+    height: 5vh;
+    width: 5vh;
+    position: absolute;
+    right: 2vw;
+  }
 }
 
 /* img to pdf  */
