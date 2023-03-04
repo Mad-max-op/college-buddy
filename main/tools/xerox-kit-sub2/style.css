@@ -136,18 +136,10 @@ body {
     color: white;
     padding-left: 2vw;
   }
-
-  .menu {
-    display: block;
-    height: 5vh;
-    width: 5vh;
-    position: absolute;
-    right: 2vw;
-  }
 }
 
 /* img to pdf  */
-.nav {
+.navv {
   padding: 0.5rem 1rem;
 
   border-bottom: 1px solid rgb(245, 244, 244);
@@ -190,7 +182,7 @@ body {
   background: rgba(230, 230, 250, 0.13);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.container {
+.file-container {
   cursor: pointer;
   position: relative;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
