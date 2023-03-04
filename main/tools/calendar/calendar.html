@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>College Buddy</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="cal.js" defer></script>
+    <script src="main.js" defer></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="body-flexbox">
@@ -21,20 +29,44 @@
         <ul id="navbar-ul">
           <li class="nav-item">
             <div class="top-border"></div>
-            <a href="/main/index.html">Home</a>
+            <a href="../index.html">Home</a>
             <div class="bottom-border"></div>
           </li>
           <li class="nav-item">
             <div class="top-border"></div>
-            <a href="/main/about_us.html">About Us</a>
+            <a href="../about_us.html">About Us</a>
             <div class="bottom-border"></div>
           </li>
           <li class="nav-item">
             <div class="top-border"></div>
-            <a href="/main/contact.html">Contact</a>
+            <a href="../contact.html">Contact</a>
             <div class="bottom-border"></div>
           </li>
         </ul>
+      </div>
+
+      <div class="main-flexbox">
+        <div class="tool">
+          <div
+            class="tool-image"
+            onclick="visit('./xerox-kit-sub/assignment.html')"
+          >
+            <label>Annoucement</label>
+          </div>
+          <div class="tool-desc">
+            <p>Annoucements</p>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="tool">
+          <div class="tool-image">
+            <label>Time table</label>
+          </div>
+          <div class="tool-desc">
+            <p>Schedulessssss</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>

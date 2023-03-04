@@ -30,8 +30,8 @@ body {
 }
 
 /* .navbar-flexbox li{
-    display : inline;
-    padding : 0 1em;
+  display : inline;
+  padding : 0 1em;
 } */
 #navbar-ul {
   display: flex;
@@ -67,6 +67,59 @@ body {
   text-decoration: none;
   color: white;
 }
+
+.main-flexbox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  padding: 10vh 0;
+}
+
+.tool {
+  display: flex;
+  flex-direction: row;
+  width: 60vw;
+  height: auto;
+  justify-content: center;
+  gap: 2em;
+}
+
+.tool-image {
+  padding: 0 80px 0 80px;
+  display: flex;
+  height: 20vh;
+  width: 20vh;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/calendar.jpeg");
+  background-blend-mode: darken;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.tool-image label {
+  position: absolute;
+  color: white;
+  border-top: solid 2px gold;
+  border-bottom: solid 2px gold;
+}
+
+.tool-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 2px gold;
+  border-bottom: solid 2px gold;
+}
+
+/* animations and all */
+
 .nav-item:hover .top-border {
   animation: top-border-animation 0.5s ease-out forwards;
 }
@@ -143,5 +196,23 @@ body {
     width: 5vh;
     position: absolute;
     right: 2vw;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1300px) {
+  .main-flexbox {
+    width: 90%;
+    margin: 2% 5% 2% 5%;
+  }
+  .main-item {
+    width: 10em;
+    height: 10em;
+    padding: 0 20% 0 20%;
+    /* background-size: cover; */
+    margin: 2% 5%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
