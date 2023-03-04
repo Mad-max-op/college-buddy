@@ -1,76 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>College Buddy</title>
-    <link rel = "stylesheet" href = "style.css">
-    <script src = "main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class = "body-flexbox">
-        <div class = "navbar-flexbox">
-            <label>College Buddy</label>
-            <img src = "../../assets/menu.png" alt = "image not found" class = "menu" onclick = "drop_box()">
-            <ul id = "navbar-ul">
-                <li class = "nav-item">
-                    <div class = "top-border"></div>
-                    <a href="../index.html">Home</a>
-                    <div class = "bottom-border"></div>
-                </li>
-                <li class = "nav-item">
-                    <div class = "top-border"></div>
-                    <a href="../about_us.html">About Us</a>
-                    <div class = "bottom-border"></div>
-                </li>
-                <li class = "nav-item">
-                    <div class = "top-border"></div>
-                    <a href="../contact.html">Contact</a>
-                    <div class = "bottom-border"></div>
-                </li>
-            </ul>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="body-flexbox">
+      <div class="navbar-flexbox">
+        <label>College Buddy</label>
+        <img
+          src="../../assets/menu.png"
+          alt="image not found"
+          class="menu"
+          onclick="drop_box()"
+        />
+        <ul id="navbar-ul">
+          <li class="nav-item">
+            <div class="top-border"></div>
+            <a href="../index.html">Home</a>
+            <div class="bottom-border"></div>
+          </li>
+          <li class="nav-item">
+            <div class="top-border"></div>
+            <a href="../about_us.html">About Us</a>
+            <div class="bottom-border"></div>
+          </li>
+          <li class="nav-item">
+            <div class="top-border"></div>
+            <a href="../contact.html">Contact</a>
+            <div class="bottom-border"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-flexbox">
+        <div class="tool">
+          <div
+            class="tool-image"
+            onclick="visit('./xerox-kit-sub/assignment.html')"
+          >
+            <label>Assignments</label>
+          </div>
+          <div class="tool-desc">
+            <p>Submit your assginments here</p>
+            <p>it will auto fill the information and send it for xerx</p>
+            <p>click on the image to use this tool</p>
+          </div>
         </div>
 
-        <div class = "main-flexbox">
-            <div class = "tool">
-                <div class = "tool-image" onclick = "visit('./xerox-kit-sub/assignment.html')">
-                    <label >Assignments</label>
-                </div>
-                <div class = "tool-desc">
-                    <p>Submit your assginments here</p>
-                    <p>it will auto fill the information and send it for xerx</p>
-                    <p>click on the image to use this tool</p>
-                </div>
-            </div>
-
-            <div class = "tool">
-                <div class = "tool-image">
-                    <label >tool name</label>
-                </div>
-                <div class = "tool-desc">
-                    <p>Submit your assginments here</p>
-                    <p>it will auto fill the information and send it for xerx</p>
-                    <p>click on the image to use this tool</p>
-                </div>
-            </div>
-
-            <div class = "tool">
-                <div class = "tool-image">
-                    <label >tool name</label>
-                </div>
-                <div class = "tool-desc">
-                    <p>Submit your assginments here</p>
-                    <p>it will auto fill the information and send it for xerx</p>
-                    <p>click on the image to use this tool</p>
-                </div>
-            </div>
+        <div class="tool">
+          <div class="tool-image" onclick="visit('./xerox-kit-sub2/pdf.html')">
+            <label>tool name</label>
+          </div>
+          <div class="tool-desc">
+            <p>Submit your assginments here</p>
+            <p>it will auto fill the information and send it for xerx</p>
+            <p>click on the image to use this tool</p>
+          </div>
         </div>
+
+        <div class="tool">
+          <div class="tool-image">
+            <label>tool name</label>
+          </div>
+          <div class="tool-desc">
+            <p>Submit your assginments here</p>
+            <p>it will auto fill the information and send it for xerx</p>
+            <p>click on the image to use this tool</p>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script src="https://unpkg.com/downloadjs@1.4.7"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Img To PDF</title>
+  </head>
+
+  <body>
+    <div class="body-flexbox">
+      <div class="navbar-flexbox">
+        <label>College Buddy</label>
+        <img
+          src="/assets/menu.png"
+          alt="image not found"
+          class="menu"
+          onclick="drop_box()"
+        />
+        <ul id="navbar-ul">
+          <li class="nav-item">
+            <div class="top-border"></div>
+            <a href="/main/index.html">Home</a>
+            <div class="bottom-border"></div>
+          </li>
+          <li class="nav-item">
+            <div class="top-border"></div>
+            <a href="/main/about_us.html">About Us</a>
+            <div class="bottom-border"></div>
+          </li>
+          <li class="nav-item">
+            <div class="top-border"></div>
+            <a href="/main/contact.html">Contact</a>
+            <div class="bottom-border"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav">
+      <span class="logoo"> <i class="fa fa-file-pdf-o"></i> PDF </span>
+      <div>
+        <button
+          class="butcdu"
+          onclick=""
+          id="convertBtn"
+          convertbtn="{convertBtn}"
+        >
+          SAVE AS PDF
+        </button>
+        <button class="butcdu" onclick="" id="download">DOWNLOAD</button>
+        <button class="butcdu" id="upload-msg" type="button">
+          UPLOAD FILES
+        </button>
+      </div>
+    </div>
+
+    <div class="input-page" id="input-page">
+      <div class="choose-file">
+        <div class="add-files">
+          <div class="container">
+            <input
+              type="file"
+              id="upload-file"
+              onchange="{encodeImageFileAsURL(this)}"
+              multiple
+              accept="image/*"
+            />
+            <h4 class="drop">DRAG & DROP</h4>
+            <p>
+              <i class="fa fa-file-image-o fa-4x img-icon"></i>
+            </p>
+            <label htmlFor="upload-file" id="custom-file">CHOOSE FILES</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pdf-page" id="pdf-page">
+      <div class="create-pdf" id="create-pdf"></div>
+    </div>
+
+    <script src="pdf.js"></script>
+  </body>
+</html>
