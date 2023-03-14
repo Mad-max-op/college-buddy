@@ -128,27 +128,17 @@ function canteen_card(src, canteen_name){
 }
 
 let udupi_list = [
-    'butter_fruit_juice.50.veg.jpg',
-    'coffee.20.veg.jpg',
-    'gobi_manchuri.60.veg.jpg',
-    'masal_dosa.45.veg.jpg',
-    'samosa.20.veg.jpg',
-    'tate_idli.45.veg.jpg',
-    'tea.10.veg.jpg',
+    'long_book.50.veg.jpg'
     ]
 
 let tango_list = [
-    'chicken_roll.70.non-veg.jpg',
-    'egg_roll.60.non-veg.jpg',
-    'honey_cake.30.non-veg.jpg',
-    'paneer_roll.60.veg.jpg',
+    'geometry_box.50.veg.jpeg',
+    'labcoat.400.veg.jpg',
+    'sketch_pens.30.veg.jpg'
     ]
 
 let munch_list = [
-    'biryani.90.non-veg.jpg',
-    'cheese_dosa.45.veg.jpg',
-    'chicken_kabab.70.non-veg.jpg',
-    'gobi_manchuri.50.veg.jpg',
+    'center_fresh.2.veg.jpg'
     ]
 
 for(i = 0; i < udupi_list.length; i++)

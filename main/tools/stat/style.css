@@ -130,19 +130,19 @@ body {
 }
 
 .tango_{
-  background-image : url("assets/tango.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
+  background-image : url("assets/stat.jpeg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
   background-blend-mode: overlay;
   background-size : cover;
 }
 
 .udupi_{
-  background-image : url("assets/udupi.jpeg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
+  background-image : url("assets/note_books.jpeg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
   background-blend-mode: overlay;
   background-size : cover;
 }
 
 .munch_{
-  background-image : url("assets/munch.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
+  background-image : url("assets/other.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .5));
   background-blend-mode: overlay;
   background-size : cover;
 }
@@ -198,6 +198,7 @@ font-size : 1.2em;
 }
 
 .canteen-card img{
+display : none;
 position: relative;
 left : 10%;
 width : 10%;
